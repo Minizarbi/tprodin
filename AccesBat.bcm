@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/TP1/Personnes.bcc" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.seesContext#_QaqJYL3jEea3DNgI76fxMw"/>
+<org.eventb.core.scInternalContext name="Personnes">
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TP1/Personnes.buc|org.eventb.core.contextFile#Personnes|org.eventb.core.carrierSet#_eE4voL3hEea3DNgI76fxMw" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="Personnet" org.eventb.core.label="type" org.eventb.core.predicate="persDansBat⊆Personne" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.invariant#_dzBjkb3hEea3DNgI76fxMw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="persDansBat" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.variable#_dzBjkL3hEea3DNgI76fxMw" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.scEvent name="persDansBau" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="persDansBat ≔ ∅ ⦂ ℙ(Personne)" org.eventb.core.label="batVide" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#'|org.eventb.core.action#_dzA8gL3hEea3DNgI76fxMw"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="persDansBav" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_dzCKoL3hEea3DNgI76fxMw">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="pasDansBat" org.eventb.core.predicate="p∈Personne ∖ persDansBat" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_dzCKoL3hEea3DNgI76fxMw|org.eventb.core.guard#_dzCxsb3hEea3DNgI76fxMw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="p" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_dzCKoL3hEea3DNgI76fxMw|org.eventb.core.parameter#_dzCxsL3hEea3DNgI76fxMw" org.eventb.core.type="Personne"/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="persDansBat ≔ persDansBat∪{p}" org.eventb.core.label="pEntre" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_dzCKoL3hEea3DNgI76fxMw|org.eventb.core.action#_dzCxsr3hEea3DNgI76fxMw"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="persDansBaw" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_cdRfUL3mEea3DNgI76fxMw">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="dansBat" org.eventb.core.predicate="p∈persDansBat" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_cdRfUL3mEea3DNgI76fxMw|org.eventb.core.guard#_cdSGYb3mEea3DNgI76fxMw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="p" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_cdRfUL3mEea3DNgI76fxMw|org.eventb.core.parameter#_cdSGYL3mEea3DNgI76fxMw" org.eventb.core.type="Personne"/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="persDansBat ≔ persDansBat ∖ {p}" org.eventb.core.label="pSort" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_cdRfUL3mEea3DNgI76fxMw|org.eventb.core.action#_cdSGYr3mEea3DNgI76fxMw"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

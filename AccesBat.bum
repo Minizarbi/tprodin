@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1481271606738" org.eventb.texttools.text_representation="machine AccesBat&#10;sees Personnes&#10;&#10;variables persDansBat&#10;&#10;invariants&#10;  @type persDansBat ⊆ Personne&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @batVide persDansBat ≔ ∅&#10;  end&#10;&#10;  event entrer&#10;    any p&#10;    where&#10;      @pasDansBat p ∈ Personne ∖ persDansBat&#10;    then&#10;      @pEntre persDansBat ≔ persDansBat ∪ {p}&#10;  end&#10;&#10;  event sortir&#10;    any p&#10;    where&#10;      @dansBat p ∈ persDansBat&#10;    then&#10;      @pSort persDansBat ≔ persDansBat ∖ {p}&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="_QaqJYL3jEea3DNgI76fxMw" org.eventb.core.target="Personnes"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_dzA8gL3hEea3DNgI76fxMw" org.eventb.core.assignment="persDansBat ≔ ∅" org.eventb.core.label="batVide"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_dzBjkL3hEea3DNgI76fxMw" org.eventb.core.identifier="persDansBat"/>
+<org.eventb.core.invariant name="_dzBjkb3hEea3DNgI76fxMw" org.eventb.core.label="type" org.eventb.core.predicate="persDansBat ⊆ Personne"/>
+<org.eventb.core.event name="_dzCKoL3hEea3DNgI76fxMw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer">
+<org.eventb.core.parameter name="_dzCxsL3hEea3DNgI76fxMw" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_dzCxsb3hEea3DNgI76fxMw" org.eventb.core.label="pasDansBat" org.eventb.core.predicate="p ∈ Personne ∖ persDansBat"/>
+<org.eventb.core.action name="_dzCxsr3hEea3DNgI76fxMw" org.eventb.core.assignment="persDansBat ≔ persDansBat ∪ {p}" org.eventb.core.label="pEntre"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_cdRfUL3mEea3DNgI76fxMw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir">
+<org.eventb.core.parameter name="_cdSGYL3mEea3DNgI76fxMw" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_cdSGYb3mEea3DNgI76fxMw" org.eventb.core.label="dansBat" org.eventb.core.predicate="p ∈ persDansBat"/>
+<org.eventb.core.action name="_cdSGYr3mEea3DNgI76fxMw" org.eventb.core.assignment="persDansBat ≔ persDansBat ∖ {p}" org.eventb.core.label="pSort"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

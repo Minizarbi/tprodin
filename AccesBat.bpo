@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="persDansBat" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpersDansBau" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="persDansBat'" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpersDansBau" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#EVTIDENTpersDansBau" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTpersDansBav" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="persDansBat'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpersDansBav" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#EVTIDENTpersDansBav" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne ∖ persDansBat" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_dzCKoL3hEea3DNgI76fxMw|org.eventb.core.guard#_dzCxsb3hEea3DNgI76fxMw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTpersDansBaw" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="persDansBat'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpersDansBaw" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#EVTIDENTpersDansBaw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈persDansBat" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.event#_cdRfUL3mEea3DNgI76fxMw|org.eventb.core.guard#_cdSGYb3mEea3DNgI76fxMw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/AccesBat.bpo|org.eventb.core.poFile#AccesBat|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="persDansBat⊆Personne" org.eventb.core.source="/TP1/AccesBat.bum|org.eventb.core.machineFile#AccesBat|org.eventb.core.invariant#_dzBjkb3hEea3DNgI76fxMw"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
