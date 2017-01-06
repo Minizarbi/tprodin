@@ -4,8 +4,8 @@
 <org.eventb.core.scInternalContext name="Personnes">
 <org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TP1/Personnes.buc|org.eventb.core.contextFile#Personnes|org.eventb.core.carrierSet#_eE4voL3hEea3DNgI76fxMw" org.eventb.core.type="ℙ(Personne)"/>
 </org.eventb.core.scInternalContext>
-<org.eventb.core.scAxiom name="Personnet" org.eventb.core.label="extZone" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw" org.eventb.core.theorem="false"/>
-<org.eventb.core.scAxiom name="Personneu" org.eventb.core.label="sortieZone" org.eventb.core.predicate="Sortie∈Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Personnet" org.eventb.core.label="extZone" org.eventb.core.predicate="Exterieur∈Zone ∖ {Sortie}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Personneu" org.eventb.core.label="sortieZone" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg" org.eventb.core.theorem="false"/>
 <org.eventb.core.scAxiom name="Personnev" org.eventb.core.label="finiteZone" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_TdvWgMLeEeaXcZAHRN3ytg" org.eventb.core.theorem="false"/>
 <org.eventb.core.scConstant name="Exterieur" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_RGBWYL3qEea3DNgI76fxMw" org.eventb.core.type="Zone"/>
 <org.eventb.core.scConstant name="Sortie" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_RGBWYb3qEea3DNgI76fxMw" org.eventb.core.type="Zone"/>

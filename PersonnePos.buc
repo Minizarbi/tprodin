@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1481820141583" org.eventb.texttools.text_representation="context PersonnePos extends Personnes&#10;sets&#10;  Zone&#10;constants&#10;  Exterieur&#10;  Sortie&#10;axioms&#10;  @extZone Exterieur ∈ Zone&#10;  @sortieZone Sortie ∈ Zone&#10;  @finiteZone finite(Zone)&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483690580959" org.eventb.texttools.text_representation="context PersonnePos extends Personnes&#10;sets&#10;  Zone&#10;constants&#10;  Exterieur&#10;  Sortie&#10;axioms&#10;  @extZone Exterieur ∈ Zone ∖ {Sortie}&#10;  @sortieZone Sortie ∈ Zone ∖ {Exterieur}&#10;  @finiteZone finite(Zone)&#10;end&#10;" version="3">
 <org.eventb.core.extendsContext name="'" org.eventb.core.target="Personnes"/>
 <org.eventb.core.carrierSet name="_RGAvUL3qEea3DNgI76fxMw" org.eventb.core.identifier="Zone"/>
 <org.eventb.core.constant name="_RGBWYL3qEea3DNgI76fxMw" org.eventb.core.identifier="Exterieur"/>
 <org.eventb.core.constant name="_RGBWYb3qEea3DNgI76fxMw" org.eventb.core.identifier="Sortie"/>
-<org.eventb.core.axiom name="_6hIXsL3qEea3DNgI76fxMw" org.eventb.core.label="extZone" org.eventb.core.predicate="Exterieur ∈ Zone"/>
-<org.eventb.core.axiom name="_GK7EUMLYEeaXcZAHRN3ytg" org.eventb.core.label="sortieZone" org.eventb.core.predicate="Sortie ∈ Zone"/>
+<org.eventb.core.axiom name="_6hIXsL3qEea3DNgI76fxMw" org.eventb.core.label="extZone" org.eventb.core.predicate="Exterieur ∈ Zone ∖ {Sortie}"/>
+<org.eventb.core.axiom name="_GK7EUMLYEeaXcZAHRN3ytg" org.eventb.core.label="sortieZone" org.eventb.core.predicate="Sortie ∈ Zone ∖ {Exterieur}"/>
 <org.eventb.core.axiom name="_TdvWgMLeEeaXcZAHRN3ytg" org.eventb.core.label="finiteZone" org.eventb.core.predicate="finite(Zone)"/>
 </org.eventb.core.contextFile>
