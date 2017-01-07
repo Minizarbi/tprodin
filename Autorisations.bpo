@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="Sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poIdentifier name="SuivreFleches" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="SuivreFlechet" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw"/>
+<org.eventb.core.poPredicate name="SuivreFlecheu" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg"/>
+<org.eventb.core.poPredicate name="SuivreFlechev" org.eventb.core.predicate="SuivreFleches∈Zone ∖ {Exterieur} → Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_TdvWgMLeEeaXcZAHRN3ytg"/>
+<org.eventb.core.poPredicate name="SuivreFlechew" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_uww8wdT7EeaKwqGypOPurg"/>
+<org.eventb.core.poIdentifier name="ZoneAutorisee" org.eventb.core.type="ℙ(Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/Autorisations.bpo|org.eventb.core.poFile#Autorisations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ZoneAutorisee⊆Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_xsbVQtT-EeaKwqGypOPurg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Exterieur∈ZoneAutorisee" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_Ph_LkNUGEeaKwqGypOPurg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

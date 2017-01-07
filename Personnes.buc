@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1481269439796" org.eventb.texttools.text_representation="context Personnes&#10;sets&#10;&#9;Personne&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.comment="1.1 Accès à un bâtiment" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483814394390" org.eventb.texttools.text_representation="context Personnes // 1.1 Accès à un bâtiment&#10;sets&#10;&#9;Personne&#10;end&#10;" version="3">
 <org.eventb.core.carrierSet name="_eE4voL3hEea3DNgI76fxMw" org.eventb.core.identifier="Personne"/>
 </org.eventb.core.contextFile>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="1.4 Propriété de sécurité" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483814384703" org.eventb.texttools.text_representation="machine ControleAcces // 1.4 Propriété de sécurité&#10;refines FusionEvt&#10;sees Autorisations&#10;&#10;variables position&#10;&#10;invariants&#10;  @posAutorisee position ⊆ Personne × ZoneAutorisee&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event entrer extends entrer&#10;  end&#10;&#10;  event sortir extends sortir&#10;  end&#10;&#10;  event changerZone extends changerZone&#10;  end&#10;&#10;  event suivreFleches extends suivreFleches&#10;  end&#10;&#10;  event passer&#10;    any p z&#10;    where&#10;      @zAutorisee z ∈ ZoneAutorisee&#10;      @pPers p ∈ Personne&#10;    then&#10;      @passer position(p) ≔ z&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="FusionEvt"/>
+<org.eventb.core.seesContext name="_-IYDINT_EeaKwqGypOPurg" org.eventb.core.target="Autorisations"/>
+<org.eventb.core.variable name="_dzBjkL3hEea3DNgI76fxMw" org.eventb.core.identifier="position"/>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxMx" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxMy" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrer">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="entrer"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxMz" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortir"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxM{" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="changerZone">
+<org.eventb.core.refinesEvent name="_nCPjINUBEeaKwqGypOPurg" org.eventb.core.target="changerZone"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxM|" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivreFleches">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="suivreFleches"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_oGlVANUBEeaKwqGypOPurg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passer">
+<org.eventb.core.parameter name="_pnBssNUEEeaKwqGypOPurg" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_pnBssdUEEeaKwqGypOPurg" org.eventb.core.identifier="z"/>
+<org.eventb.core.guard name="_pnBsstUEEeaKwqGypOPurg" org.eventb.core.label="zAutorisee" org.eventb.core.predicate="z ∈ ZoneAutorisee"/>
+<org.eventb.core.guard name="_C0mvcNUFEeaKwqGypOPurg" org.eventb.core.label="pPers" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.action name="_ugfgkNUFEeaKwqGypOPurg" org.eventb.core.assignment="position(p) ≔ z" org.eventb.core.label="passer"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_k9bkANUHEeaKwqGypOPurg" org.eventb.core.label="posAutorisee" org.eventb.core.predicate="position ⊆ Personne × ZoneAutorisee"/>
+</org.eventb.core.machineFile>

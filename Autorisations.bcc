@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
-<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/Personnes.bcc|org.eventb.core.scContextFile#Personnes" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/PersonnePos.bcc|org.eventb.core.scContextFile#PersonnePos" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.extendsContext#'"/>
 <org.eventb.core.scInternalContext name="Personnes">
 <org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TP1/Personnes.buc|org.eventb.core.contextFile#Personnes|org.eventb.core.carrierSet#_eE4voL3hEea3DNgI76fxMw" org.eventb.core.type="ℙ(Personne)"/>
 </org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="PersonnePos">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/Personnes.bcc|org.eventb.core.scContextFile#Personnes" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.extendsContext#'"/>
 <org.eventb.core.scAxiom name="Personnet" org.eventb.core.label="extZone" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw" org.eventb.core.theorem="false"/>
 <org.eventb.core.scAxiom name="Personneu" org.eventb.core.label="versSortie" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg" org.eventb.core.theorem="false"/>
 <org.eventb.core.scAxiom name="Personnev" org.eventb.core.label="suivrFleches" org.eventb.core.predicate="SuivreFleches∈Zone ∖ {Exterieur} → Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_TdvWgMLeEeaXcZAHRN3ytg" org.eventb.core.theorem="false"/>
@@ -12,4 +14,8 @@
 <org.eventb.core.scConstant name="Sortie" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_RGBWYb3qEea3DNgI76fxMw" org.eventb.core.type="ℙ(Zone×Zone)"/>
 <org.eventb.core.scConstant name="SuivreFleches" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_uww8wNT7EeaKwqGypOPurg" org.eventb.core.type="ℙ(Zone×Zone)"/>
 <org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.carrierSet#_RGAvUL3qEea3DNgI76fxMw" org.eventb.core.type="ℙ(Zone)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="PersonnePot" org.eventb.core.label="a1" org.eventb.core.predicate="ZoneAutorisee⊆Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_xsbVQtT-EeaKwqGypOPurg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="PersonnePou" org.eventb.core.label="a2" org.eventb.core.predicate="Exterieur∈ZoneAutorisee" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_Ph_LkNUGEeaKwqGypOPurg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ZoneAutorisee" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.constant#_xsbVQNT-EeaKwqGypOPurg" org.eventb.core.type="ℙ(Zone)"/>
 </org.eventb.core.scContextFile>

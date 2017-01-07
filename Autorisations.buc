@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.comment="1.4 Propriété de sécurité" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483814424338" org.eventb.texttools.text_representation="context Autorisations // 1.4 Propriété de sécurité&#10;extends PersonnePos&#10;constants&#10;  ZoneAutorisee&#10;axioms&#10;  @a1 ZoneAutorisee ⊆ Zone&#10;  @a2 Exterieur ∈ ZoneAutorisee&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="PersonnePos"/>
+<org.eventb.core.constant name="_xsbVQNT-EeaKwqGypOPurg" org.eventb.core.identifier="ZoneAutorisee"/>
+<org.eventb.core.axiom name="_xsbVQtT-EeaKwqGypOPurg" org.eventb.core.label="a1" org.eventb.core.predicate="ZoneAutorisee ⊆ Zone"/>
+<org.eventb.core.axiom name="_Ph_LkNUGEeaKwqGypOPurg" org.eventb.core.label="a2" org.eventb.core.predicate="Exterieur ∈ ZoneAutorisee"/>
+</org.eventb.core.contextFile>

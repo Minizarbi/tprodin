@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poFile org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="17">
 <org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
 <org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
 <org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
-<org.eventb.core.poIdentifier name="Sortie" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="Sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poIdentifier name="SuivreFleches" org.eventb.core.type="ℙ(Zone×Zone)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/PersonnePos.bpo|org.eventb.core.poFile#PersonnePos|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Exterieur∈Zone ∖ {Sortie}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_TdvWgMLeEeaXcZAHRN3ytg"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/PersonnePos.bpo|org.eventb.core.poFile#PersonnePos|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="SuivreFleches∈Zone ∖ {Exterieur} → Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_TdvWgMLeEeaXcZAHRN3ytg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_uww8wdT7EeaKwqGypOPurg"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
