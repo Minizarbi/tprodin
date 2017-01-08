@@ -287,13 +287,13 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Personne"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="FIN" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Personne,Zone">
 <org.eventb.core.lang name="L"/>
@@ -346,9 +346,9 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒p∈dom(position)∧position∈Personne ⇸ Zone∧{Z⦂ℙ(Zone)·position(p)∈Z∧Sortie[Z]⊆Z ∣ Z}≠(∅ ⦂ ℙ(ℙ(Zone)))"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(⋃p⦂Personne·p∈Personne ∣ {p} × inter({Z⦂ℙ(Zone)·position(p)∈Z∧Sortie[Z]⊆Z ∣ Z}))"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="suivreFleches/VAR" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Personne,Zone">
 <org.eventb.core.lang name="L"/>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/Voisinages.bcc|org.eventb.core.scContextFile#Voisinages" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="Personnes">
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TP1/Personnes.buc|org.eventb.core.contextFile#Personnes|org.eventb.core.carrierSet#_eE4voL3hEea3DNgI76fxMw" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="PersonnePos">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/Personnes.bcc|org.eventb.core.scContextFile#Personnes" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="Personnet" org.eventb.core.label="extZone" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Personneu" org.eventb.core.label="versSortie" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Personnev" org.eventb.core.label="suivrFleches" org.eventb.core.predicate="SuivreFleches∈Zone ∖ {Exterieur} → Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_TdvWgMLeEeaXcZAHRN3ytg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Personnew" org.eventb.core.label="finiteZone" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_uww8wdT7EeaKwqGypOPurg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Exterieur" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_RGBWYL3qEea3DNgI76fxMw" org.eventb.core.type="Zone"/>
+<org.eventb.core.scConstant name="Sortie" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_RGBWYb3qEea3DNgI76fxMw" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.scConstant name="SuivreFleches" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_uww8wNT7EeaKwqGypOPurg" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.carrierSet#_RGAvUL3qEea3DNgI76fxMw" org.eventb.core.type="ℙ(Zone)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="Autorisations">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/PersonnePos.bcc|org.eventb.core.scContextFile#PersonnePos" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="PersonnePot" org.eventb.core.label="a1" org.eventb.core.predicate="ZoneAutorisee∈Personne ↔ Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_xsbVQtT-EeaKwqGypOPurg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="PersonnePou" org.eventb.core.label="a2" org.eventb.core.predicate="Exterieur∈ran(ZoneAutorisee)" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_PhDBQNXTEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ZoneAutorisee" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.constant#_xsbVQNT-EeaKwqGypOPurg" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="Voisinages">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/Autorisations.bcc|org.eventb.core.scContextFile#Autorisations" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="Autorisationt" org.eventb.core.label="voisine" org.eventb.core.predicate="Voisine∈Zone ⤖ Zone" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_MFIbYdXQEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Autorisationu" org.eventb.core.label="pasMeme" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z ↦ z∉Voisine" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_loVVkNXgEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Autorisationv" org.eventb.core.label="voisVersExt" org.eventb.core.predicate="VoisineVersExt∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_O1VsoNXlEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Autorisationw" org.eventb.core.label="voisVois" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ VoisineVersExt(z)∈Voisine" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_O1VsodXlEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Voisine" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.constant#_MFIbYNXQEeaypPhbtpeAIQ" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.scConstant name="VoisineVersExt" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.constant#_MtgdcNXlEeaypPhbtpeAIQ" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="Autorisationt" org.eventb.core.label="orig" org.eventb.core.predicate="Origine∈Porte → Zone" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.axiom#_Y7H-8tXnEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Autorisationu" org.eventb.core.label="dest" org.eventb.core.predicate="Destination∈Porte → Zone" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.axiom#_Y7H-89XnEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Destination" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.constant#_Y7H-8dXnEeaypPhbtpeAIQ" org.eventb.core.type="ℙ(Porte×Zone)"/>
+<org.eventb.core.scConstant name="Origine" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.constant#_Y7H-8NXnEeaypPhbtpeAIQ" org.eventb.core.type="ℙ(Porte×Zone)"/>
+<org.eventb.core.scCarrierSet name="Porte" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.carrierSet#_Or_4gNXnEeaypPhbtpeAIQ" org.eventb.core.type="ℙ(Porte)"/>
+</org.eventb.core.scContextFile>

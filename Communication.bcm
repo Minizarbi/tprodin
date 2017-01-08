@@ -67,5 +67,6 @@
 <org.eventb.core.scGuard name=")" org.eventb.core.label="zVoisine" org.eventb.core.predicate="position(p) ↦ z∈Voisine" org.eventb.core.source="/TP1/Communication.bum|org.eventb.core.machineFile#Communication|org.eventb.core.event#_hKXWctXVEeaypPhbtpeAIQ|org.eventb.core.guard#_Q_P04NXkEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
 <org.eventb.core.scParameter name="p" org.eventb.core.source="/TP1/Communication.bum|org.eventb.core.machineFile#Communication|org.eventb.core.event#_hKXWctXVEeaypPhbtpeAIQ|org.eventb.core.parameter#_OmOvEdXkEeaypPhbtpeAIQ" org.eventb.core.type="Personne"/>
 <org.eventb.core.scParameter name="z" org.eventb.core.source="/TP1/Communication.bum|org.eventb.core.machineFile#Communication|org.eventb.core.event#_hKXWctXVEeaypPhbtpeAIQ|org.eventb.core.parameter#_OmOvENXkEeaypPhbtpeAIQ" org.eventb.core.type="Zone"/>
+<org.eventb.core.scAction name="{" org.eventb.core.assignment="position ≔ position{p ↦ z}" org.eventb.core.label="passer" org.eventb.core.source="/TP1/Communication.bum|org.eventb.core.machineFile#Communication|org.eventb.core.event#_hKXWctXVEeaypPhbtpeAIQ|org.eventb.core.action#_U2vp4NXvEeaypPhbtpeAIQ"/>
 </org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>

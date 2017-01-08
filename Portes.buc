@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.comment="1.6 Introduction des portes" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483914500098" org.eventb.texttools.text_representation="context Portes // 1.6 Introduction des portes&#10;extends Voisinages&#10;sets&#10;  Porte&#10;constants&#10;  Origine&#10;  Destination&#10;axioms&#10;  @orig Origine ∈ Porte → Zone&#10;  @dest Destination ∈ Porte → Zone&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="Voisinages"/>
+<org.eventb.core.carrierSet name="_Or_4gNXnEeaypPhbtpeAIQ" org.eventb.core.identifier="Porte"/>
+<org.eventb.core.constant name="_Y7H-8NXnEeaypPhbtpeAIQ" org.eventb.core.identifier="Origine"/>
+<org.eventb.core.constant name="_Y7H-8dXnEeaypPhbtpeAIQ" org.eventb.core.identifier="Destination"/>
+<org.eventb.core.axiom name="_Y7H-8tXnEeaypPhbtpeAIQ" org.eventb.core.label="orig" org.eventb.core.predicate="Origine ∈ Porte → Zone"/>
+<org.eventb.core.axiom name="_Y7H-89XnEeaypPhbtpeAIQ" org.eventb.core.label="dest" org.eventb.core.predicate="Destination ∈ Porte → Zone"/>
+</org.eventb.core.contextFile>

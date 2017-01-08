@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/fran/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/part/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/zVoisine/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/part/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/zAutorisee/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/zVoisine/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="franchir/orig/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="franchir/fran/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="accepter/dest/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="accepter/part/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="refuser/dest/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="refuser/part/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="41" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="eteindre_rouge/part/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="eteindre_vert/part/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

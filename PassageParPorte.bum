@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="1.6 Introduction des portes" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483914495227" org.eventb.texttools.text_representation="machine PassageParPorte // 1.6 Introduction des portes&#10;refines Communication&#10;sees Portes&#10;&#10;variables position franchissement porteRouge porteVerte&#10;&#10;invariants&#10;  @fran franchissement ∈ Personne ⇸ Porte&#10;  @pRouge porteRouge ⊆ Porte&#10;  @pVerte porteVerte ⊆ Porte&#10;  @part porteRouge ∩ porteVerte = ∅&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @franInit franchissement ≔ ∅&#10;      @porteRouge porteRouge ≔ ∅&#10;      @porteVerte porteVerte ≔ ∅&#10;  end&#10;&#10;  event sortir extends sortir&#10;  end&#10;&#10;  event changerZone extends changerZone&#10;  end&#10;&#10;  event suivreFleches extends suivreFleches&#10;  end&#10;&#10;  event passer refines passer&#10;    any p porte z&#10;    when&#10;      @zAutorisee porte ∈ porteVerte&#10;      @zVoisine z = Destination(porte) ∧ position(p) = Origine(porte)&#10;    then&#10;      @passer position(p) ≔ z&#10;      @eteindre porteVerte ≔ porteVerte ∖ {porte}&#10;  end&#10;&#10;  event franchir&#10;    any p z porte&#10;    where&#10;      @orig porte ↦ position(p) ∈ Origine&#10;      @dest porte ↦ z ∈ Destination&#10;      @auto p ↦ z ∈ ZoneAutorisee&#10;      @eteint porte ∉ porteRouge ∧ porte ∉ porteVerte&#10;    then&#10;      @fran franchissement ≔ franchissement ∪ {p ↦ porte}&#10;  end&#10;&#10;  event accepter&#10;    any p porte&#10;    where&#10;      @fran p ↦ porte ∈ franchissement&#10;      @dest p ↦ Destination(porte) ∈ ZoneAutorisee&#10;      @eteint porte ∉ porteRouge ∧ porte ∉ porteVerte&#10;    then&#10;      @allumer porteVerte ≔ Porte ∪ {porte}&#10;  end&#10;&#10;  event refuser&#10;    any p porte&#10;    where&#10;      @fran p ↦ porte ∈ franchissement&#10;      @dest p ↦ Destination(porte) ∉ ZoneAutorisee ∨ porte ∈ porteRouge ∨ porte ∈ porteVerte&#10;    then&#10;      @allumer porteRouge ≔ Porte ∪ {porte}&#10;  end&#10;&#10;  event eteindre_rouge&#10;    any porte&#10;    where&#10;      @rouge porte ∈ porteRouge&#10;    then&#10;      @eteindre porteRouge ≔ porteRouge ∖ {porte}&#10;  end&#10;&#10;  event eteindre_vert&#10;    any porte&#10;    where&#10;      @verte porte ∈ porteVerte&#10;    then&#10;      @eteindre porteVerte ≔ porteVerte ∖ {porte}&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Communication"/>
+<org.eventb.core.seesContext name="_MFCn4NXoEeaypPhbtpeAIQ" org.eventb.core.target="Portes"/>
+<org.eventb.core.variable name="_QZSbYNXUEeaypPhbtpeAIQ" org.eventb.core.identifier="position"/>
+<org.eventb.core.event name="_QZSbYNXUEeaypPhbtpeAIR" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_jb0ZsNXrEeaypPhbtpeAIQ" org.eventb.core.assignment="franchissement ≔ ∅" org.eventb.core.label="franInit"/>
+<org.eventb.core.action name="_m7keENXrEeaypPhbtpeAIQ" org.eventb.core.assignment="porteRouge ≔ ∅" org.eventb.core.label="porteRouge"/>
+<org.eventb.core.action name="_FgcgMNXtEeaypPhbtpeAIQ" org.eventb.core.assignment="porteVerte ≔ ∅" org.eventb.core.label="porteVerte"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_QZSbYNXUEeaypPhbtpeAIS" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="sortir"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_QZSbYNXUEeaypPhbtpeAIT" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="changerZone">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="changerZone"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_QZSbYNXUEeaypPhbtpeAIU" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivreFleches">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="suivreFleches"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_QZSbYNXUEeaypPhbtpeAIV" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passer">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="passer"/>
+<org.eventb.core.parameter name="_yJpyANXpEeaypPhbtpeAIQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_yJpyAdXpEeaypPhbtpeAIQ" org.eventb.core.identifier="porte"/>
+<org.eventb.core.guard name="_yJpyAtXpEeaypPhbtpeAIQ" org.eventb.core.label="zAutorisee" org.eventb.core.predicate="porte ∈ porteVerte"/>
+<org.eventb.core.guard name="_grxwcdXqEeaypPhbtpeAIQ" org.eventb.core.label="zVoisine" org.eventb.core.predicate="z = Destination(porte) ∧ position(p) = Origine(porte)"/>
+<org.eventb.core.action name="_L860ZNXtEeaypPhbtpeAIQ" org.eventb.core.assignment="position(p) ≔ z" org.eventb.core.label="passer"/>
+<org.eventb.core.parameter name="_31NfQNXsEeaypPhbtpeAIQ" org.eventb.core.identifier="z"/>
+<org.eventb.core.action name="_agP68NXtEeaypPhbtpeAIQ" org.eventb.core.assignment="porteVerte ≔ porteVerte ∖ {porte}" org.eventb.core.label="eteindre"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_iPW4gNXpEeaypPhbtpeAIQ" org.eventb.core.identifier="franchissement"/>
+<org.eventb.core.event name="_iPW4gdXpEeaypPhbtpeAIQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="franchir">
+<org.eventb.core.parameter name="_31NfQdXsEeaypPhbtpeAIQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_grxwcNXqEeaypPhbtpeAIQ" org.eventb.core.identifier="z"/>
+<org.eventb.core.parameter name="_L860YdXtEeaypPhbtpeAIQ" org.eventb.core.identifier="porte"/>
+<org.eventb.core.guard name="_GtZQ8NXsEeaypPhbtpeAIQ" org.eventb.core.label="orig" org.eventb.core.predicate="porte ↦ position(p) ∈ Origine"/>
+<org.eventb.core.guard name="_31NfQtXsEeaypPhbtpeAIQ" org.eventb.core.label="dest" org.eventb.core.predicate="porte ↦ z ∈ Destination"/>
+<org.eventb.core.guard name="_31OGUNXsEeaypPhbtpeAIQ" org.eventb.core.label="auto" org.eventb.core.predicate="p ↦ z ∈ ZoneAutorisee"/>
+<org.eventb.core.guard name="_grxwctXqEeaypPhbtpeAIQ" org.eventb.core.label="eteint" org.eventb.core.predicate="porte ∉ porteRouge ∧ porte ∉ porteVerte"/>
+<org.eventb.core.action name="_jZlTItXtEeaypPhbtpeAIQ" org.eventb.core.assignment="franchissement ≔ franchissement ∪ {p ↦ porte}" org.eventb.core.label="fran"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_iPW4gtXpEeaypPhbtpeAIQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="accepter">
+<org.eventb.core.parameter name="_L860YNXtEeaypPhbtpeAIQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_jZlTINXtEeaypPhbtpeAIQ" org.eventb.core.identifier="porte"/>
+<org.eventb.core.guard name="_L860Y9XtEeaypPhbtpeAIQ" org.eventb.core.label="fran" org.eventb.core.predicate="p ↦ porte ∈ franchissement"/>
+<org.eventb.core.guard name="_XC8GkdXtEeaypPhbtpeAIQ" org.eventb.core.label="dest" org.eventb.core.predicate="p ↦ Destination(porte) ∈ ZoneAutorisee"/>
+<org.eventb.core.guard name="_L860YtXtEeaypPhbtpeAIQ" org.eventb.core.label="eteint" org.eventb.core.predicate="porte ∉ porteRouge ∧ porte ∉ porteVerte"/>
+<org.eventb.core.action name="_XfwI8NXuEeaypPhbtpeAIQ" org.eventb.core.assignment="porteVerte ≔ Porte ∪ {porte}" org.eventb.core.label="allumer"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_iPW4g9XpEeaypPhbtpeAIQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="refuser">
+<org.eventb.core.parameter name="_XC8GkNXtEeaypPhbtpeAIQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_Ro7DANXvEeaypPhbtpeAIQ" org.eventb.core.identifier="porte"/>
+<org.eventb.core.guard name="_djf0ENXuEeaypPhbtpeAIQ" org.eventb.core.label="fran" org.eventb.core.predicate="p ↦ porte ∈ franchissement"/>
+<org.eventb.core.guard name="_jZlTIdXtEeaypPhbtpeAIQ" org.eventb.core.label="dest" org.eventb.core.predicate="p ↦ Destination(porte) ∉ ZoneAutorisee ∨ porte ∈ porteRouge ∨ porte ∈ porteVerte"/>
+<org.eventb.core.action name="_XfwI8dXuEeaypPhbtpeAIQ" org.eventb.core.assignment="porteRouge ≔ Porte ∪ {porte}" org.eventb.core.label="allumer"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_iPW4hNXpEeaypPhbtpeAIQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="eteindre_rouge">
+<org.eventb.core.parameter name="_Ro7DAtXvEeaypPhbtpeAIQ" org.eventb.core.identifier="porte"/>
+<org.eventb.core.guard name="_Ro7DAdXvEeaypPhbtpeAIQ" org.eventb.core.label="rouge" org.eventb.core.predicate="porte ∈ porteRouge"/>
+<org.eventb.core.action name="_e0poANXwEeaypPhbtpeAIQ" org.eventb.core.assignment="porteRouge ≔ porteRouge ∖ {porte}" org.eventb.core.label="eteindre"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_qMNaUNXpEeaypPhbtpeAIQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="eteindre_vert">
+<org.eventb.core.parameter name="__Z5b4NXwEeaypPhbtpeAIQ" org.eventb.core.identifier="porte"/>
+<org.eventb.core.guard name="_Ro7DA9XvEeaypPhbtpeAIQ" org.eventb.core.label="verte" org.eventb.core.predicate="porte ∈ porteVerte"/>
+<org.eventb.core.action name="_RZ754NXxEeaypPhbtpeAIQ" org.eventb.core.assignment="porteVerte ≔ porteVerte ∖ {porte}" org.eventb.core.label="eteindre"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_VcrlUNXrEeaypPhbtpeAIQ" org.eventb.core.label="fran" org.eventb.core.predicate="franchissement ∈ Personne ⇸ Porte"/>
+<org.eventb.core.variable name="_PYRrgNXuEeaypPhbtpeAIQ" org.eventb.core.identifier="porteRouge"/>
+<org.eventb.core.variable name="_PYSSkNXuEeaypPhbtpeAIQ" org.eventb.core.identifier="porteVerte"/>
+<org.eventb.core.invariant name="_SXHbMNXuEeaypPhbtpeAIQ" org.eventb.core.label="pRouge" org.eventb.core.predicate="porteRouge ⊆ Porte"/>
+<org.eventb.core.invariant name="_SXHbMdXuEeaypPhbtpeAIQ" org.eventb.core.label="pVerte" org.eventb.core.predicate="porteVerte ⊆ Porte"/>
+<org.eventb.core.invariant name="_SXHbMtXuEeaypPhbtpeAIQ" org.eventb.core.label="part" org.eventb.core.predicate="porteRouge ∩ porteVerte = ∅"/>
+</org.eventb.core.machineFile>
