@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.comment="1.5 Introduction des voisinages" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483909126829" org.eventb.texttools.text_representation="context Voisinages // 1.5 Introduction des voisinages&#10;extends Autorisations&#10;constants&#10;  Voisine&#10;  VoisineVersExt&#10;axioms&#10;  @voisine Voisine ∈ Zone ⤖ Zone&#10;  @pasMeme ∀ z · z ∈ Zone ⇒ z ↦ z ∉ Voisine&#10;  @voisVersExt VoisineVersExt ∈ Zone ∖ {Exterieur} → Zone&#10;  @voisVois ∀ z · z ∈ Zone ∖ {Exterieur} ⇒ z ↦ VoisineVersExt(z) ∈ Voisine&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="Autorisations"/>
+<org.eventb.core.constant name="_MFIbYNXQEeaypPhbtpeAIQ" org.eventb.core.identifier="Voisine"/>
+<org.eventb.core.axiom name="_MFIbYdXQEeaypPhbtpeAIQ" org.eventb.core.label="voisine" org.eventb.core.predicate="Voisine ∈ Zone ⤖ Zone"/>
+<org.eventb.core.axiom name="_loVVkNXgEeaypPhbtpeAIQ" org.eventb.core.label="pasMeme" org.eventb.core.predicate="∀ z · z ∈ Zone ⇒ z ↦ z ∉ Voisine"/>
+<org.eventb.core.constant name="_MtgdcNXlEeaypPhbtpeAIQ" org.eventb.core.identifier="VoisineVersExt"/>
+<org.eventb.core.axiom name="_O1VsoNXlEeaypPhbtpeAIQ" org.eventb.core.label="voisVersExt" org.eventb.core.predicate="VoisineVersExt ∈ Zone ∖ {Exterieur} → Zone"/>
+<org.eventb.core.axiom name="_O1VsodXlEeaypPhbtpeAIQ" org.eventb.core.label="voisVois" org.eventb.core.predicate="∀ z · z ∈ Zone ∖ {Exterieur} ⇒ z ↦ VoisineVersExt(z) ∈ Voisine"/>
+</org.eventb.core.contextFile>

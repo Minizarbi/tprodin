@@ -2,8 +2,9 @@
 <org.eventb.core.psFile>
 <org.eventb.core.psStatus name="posAutorisee/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/posAutorisee/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sortir/posAutorisee/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="changerZone/posAutorisee/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="passer/posAutorisee/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="24" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="passer/position/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="24" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sortir/posAutorisee/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="29" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="changerZone/posAutorisee/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="31" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="suivreFleches/posAutorisee/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="30" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/posAutorisee/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/position/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

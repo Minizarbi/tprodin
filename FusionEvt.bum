@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.comment="1.3 Fusion d’événements" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483902407090" org.eventb.texttools.text_representation="machine FusionEvt // 1.3 Fusion d’événements&#10;refines StructurationBat&#10;sees PersonnePos&#10;&#10;variables position&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event sortir extends sortir&#10;  end&#10;&#10;  event changerZone refines changerZone entrer&#10;    any p z&#10;    where&#10;      @estUnBat z ∈ Zone ∖ {Exterieur}&#10;      @posPers position(p) ∈ Zone&#10;      @pers p ∈ Personne&#10;    then&#10;      @changeZone position(p) ≔ z&#10;  end&#10;&#10;  event suivreFleches refines suivreFleches&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="1.3 Fusion d’événements" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483909471803" org.eventb.texttools.text_representation="machine FusionEvt // 1.3 Fusion d’événements&#10;refines StructurationBat&#10;sees PersonnePos&#10;&#10;variables position&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event sortir extends sortir&#10;  end&#10;&#10;  event changerZone refines changerZone entrer&#10;    any p z&#10;    where&#10;      @estUnBat z ∈ Zone ∖ {Exterieur}&#10;      @posPers position(p) ∈ Zone&#10;    then&#10;      @changeZone position(p) ≔ z&#10;  end&#10;&#10;  event suivreFleches extends suivreFleches&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="StructurationBat"/>
 <org.eventb.core.seesContext name="_JGvGcMLeEeaXcZAHRN3ytg" org.eventb.core.target="PersonnePos"/>
 <org.eventb.core.variable name="_dzBjkL3hEea3DNgI76fxMw" org.eventb.core.identifier="position"/>
@@ -14,10 +14,9 @@
 <org.eventb.core.parameter name="_0O4gYdT9EeaKwqGypOPurg" org.eventb.core.identifier="z"/>
 <org.eventb.core.guard name="_0O4gYtT9EeaKwqGypOPurg" org.eventb.core.label="estUnBat" org.eventb.core.predicate="z ∈ Zone ∖ {Exterieur}"/>
 <org.eventb.core.guard name="_3PoUkNT9EeaKwqGypOPurg" org.eventb.core.label="posPers" org.eventb.core.predicate="position(p) ∈ Zone"/>
-<org.eventb.core.guard name="_CkO1UNT-EeaKwqGypOPurg" org.eventb.core.label="pers" org.eventb.core.predicate="p ∈ Personne"/>
 <org.eventb.core.action name="_0O4gY9T9EeaKwqGypOPurg" org.eventb.core.assignment="position(p) ≔ z" org.eventb.core.label="changeZone"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxM{" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="suivreFleches">
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxM{" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivreFleches">
 <org.eventb.core.refinesEvent name="_mhIm0NXVEeaypPhbtpeAIQ" org.eventb.core.target="suivreFleches"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

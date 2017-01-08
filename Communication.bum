@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="1.5 Introduction des voisinages" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483909540719" org.eventb.texttools.text_representation="machine Communication // 1.5 Introduction des voisinages&#10;refines ControleAcces&#10;sees Voisinages&#10;&#10;variables position&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event sortir extends sortir&#10;  end&#10;&#10;  event changerZone extends changerZone&#10;  end&#10;&#10;  event suivreFleches extends suivreFleches&#10;&#10;  end&#10;&#10;  event passer refines passer&#10;    any z p&#10;    when&#10;      @zAutorisee p ↦ z ∈ ZoneAutorisee&#10;      @zVoisine position(p) ↦ z ∈ Voisine&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_NgUDINXUEeaypPhbtpeAIQ" org.eventb.core.target="ControleAcces"/>
+<org.eventb.core.seesContext name="_-cpkwNXVEeaypPhbtpeAIQ" org.eventb.core.target="Voisinages"/>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxMx" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxMy" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir">
+<org.eventb.core.refinesEvent name="_sDI20NXVEeaypPhbtpeAIQ" org.eventb.core.target="sortir"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_dzBjkL3hEea3DNgI76fxMz" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="changerZone">
+<org.eventb.core.refinesEvent name="_sDI20dXVEeaypPhbtpeAIQ" org.eventb.core.target="changerZone"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_QZSbYNXUEeaypPhbtpeAIQ" org.eventb.core.identifier="position"/>
+<org.eventb.core.event name="_hKXWcNXVEeaypPhbtpeAIQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivreFleches">
+<org.eventb.core.refinesEvent name="_sDJd4NXVEeaypPhbtpeAIQ" org.eventb.core.target="suivreFleches"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_hKXWctXVEeaypPhbtpeAIQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passer">
+<org.eventb.core.refinesEvent name="_sDJd4dXVEeaypPhbtpeAIQ" org.eventb.core.target="passer"/>
+<org.eventb.core.parameter name="_OmOvENXkEeaypPhbtpeAIQ" org.eventb.core.identifier="z"/>
+<org.eventb.core.parameter name="_OmOvEdXkEeaypPhbtpeAIQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_NIIZYNXkEeaypPhbtpeAIQ" org.eventb.core.label="zAutorisee" org.eventb.core.predicate="p ↦ z ∈ ZoneAutorisee"/>
+<org.eventb.core.guard name="_Q_P04NXkEeaypPhbtpeAIQ" org.eventb.core.label="zVoisine" org.eventb.core.predicate="position(p) ↦ z ∈ Voisine"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

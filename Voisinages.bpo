@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="Sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poIdentifier name="SuivreFleches" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="SuivreFlechet" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_6hIXsL3qEea3DNgI76fxMw"/>
+<org.eventb.core.poPredicate name="SuivreFlecheu" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_GK7EUMLYEeaXcZAHRN3ytg"/>
+<org.eventb.core.poPredicate name="SuivreFlechev" org.eventb.core.predicate="SuivreFleches∈Zone ∖ {Exterieur} → Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_TdvWgMLeEeaXcZAHRN3ytg"/>
+<org.eventb.core.poPredicate name="SuivreFlechew" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.axiom#_uww8wdT7EeaKwqGypOPurg"/>
+<org.eventb.core.poIdentifier name="ZoneAutorisee" org.eventb.core.type="ℙ(Personne×Zone)"/>
+<org.eventb.core.poPredicate name="ZoneAutorisef" org.eventb.core.predicate="ZoneAutorisee∈Personne ↔ Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_xsbVQtT-EeaKwqGypOPurg"/>
+<org.eventb.core.poPredicate name="ZoneAutoriseg" org.eventb.core.predicate="Exterieur∈ran(ZoneAutorisee)" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_PhDBQNXTEeaypPhbtpeAIQ"/>
+<org.eventb.core.poIdentifier name="Voisine" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poIdentifier name="VoisineVersExt" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="voisVois/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/Voisinages.bpo|org.eventb.core.poFile#Voisinages|org.eventb.core.poPredicateSet#HYPAutorisationv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z∈dom(VoisineVersExt)∧VoisineVersExt∈Zone ⇸ Zone" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_O1VsodXlEeaypPhbtpeAIQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_O1VsodXlEeaypPhbtpeAIQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/Voisinages.bpo|org.eventb.core.poFile#Voisinages|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/TP1/Voisinages.bpo|org.eventb.core.poFile#Voisinages|org.eventb.core.poPredicateSet#HYPAutorisationv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPAutorisationv" org.eventb.core.parentSet="/TP1/Voisinages.bpo|org.eventb.core.poFile#Voisinages|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Voisine∈Zone ⤖ Zone" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_MFIbYdXQEeaypPhbtpeAIQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z ↦ z∉Voisine" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_loVVkNXgEeaypPhbtpeAIQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="VoisineVersExt∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_O1VsoNXlEeaypPhbtpeAIQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/Voisinages.bpo|org.eventb.core.poFile#Voisinages|org.eventb.core.poPredicateSet#HYPAutorisationv" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ VoisineVersExt(z)∈Voisine" org.eventb.core.source="/TP1/Voisinages.buc|org.eventb.core.contextFile#Voisinages|org.eventb.core.axiom#_O1VsodXlEeaypPhbtpeAIQ"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

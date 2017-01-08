@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="24">
+<org.eventb.core.poFile org.eventb.core.poStamp="32">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="21">
 <org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
 <org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
@@ -40,7 +40,7 @@
 <org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationu" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationu" org.eventb.core.poStamp="22"/>
-<org.eventb.core.poSequent name="sortir/posAutorisee/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poSequent name="sortir/posAutorisee/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="29">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒p0 ↦ (position{p ↦ Exterieur})(p0)∈ZoneAutorisee" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.invariant#_k9bkANUHEeaKwqGypOPurg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TP1/FusionEvt.bum|org.eventb.core.machineFile#FusionEvt|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxMy"/>
@@ -53,10 +53,10 @@
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 <org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationv" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationv" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationv" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationv" org.eventb.core.poStamp="29">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/TP1/StructurationBat.bum|org.eventb.core.machineFile#StructurationBat|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxMz|org.eventb.core.guard#_UgXwENNkEea1zex5P1bZOg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="changerZone/posAutorisee/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poSequent name="changerZone/posAutorisee/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="31">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒p0 ↦ (position{p ↦ z})(p0)∈ZoneAutorisee" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.invariant#_k9bkANUHEeaKwqGypOPurg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TP1/FusionEvt.bum|org.eventb.core.machineFile#FusionEvt|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxMz"/>
@@ -70,13 +70,27 @@
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 <org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationw" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationw" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationw" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationw" org.eventb.core.poStamp="31">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/FusionEvt.bum|org.eventb.core.machineFile#FusionEvt|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxMz|org.eventb.core.guard#_0O4gYtT9EeaKwqGypOPurg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(p)∈Zone" org.eventb.core.source="/TP1/FusionEvt.bum|org.eventb.core.machineFile#FusionEvt|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxMz|org.eventb.core.guard#_3PoUkNT9EeaKwqGypOPurg"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/FusionEvt.bum|org.eventb.core.machineFile#FusionEvt|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxMz|org.eventb.core.guard#_CkO1UNT-EeaKwqGypOPurg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationx" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-<org.eventb.core.poSequent name="passer/posAutorisee/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="24">
+<org.eventb.core.poSequent name="suivreFleches/posAutorisee/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒p0 ↦ (position{p ↦ SuivreFleches(position(p))})(p0)∈ZoneAutorisee" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.invariant#_k9bkANUHEeaKwqGypOPurg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TP1/FusionEvt.bum|org.eventb.core.machineFile#FusionEvt|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM{"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM{"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.invariant#_k9bkANUHEeaKwqGypOPurg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poSequent#suivreFleches\/posAutorisee\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationx" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationx" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationx" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position(p)∈Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/StructurationBat.bum|org.eventb.core.machineFile#StructurationBat|org.eventb.core.event#_x699sb3rEea3DNgI76fxMw|org.eventb.core.guard#_UgXwEdNkEea1zex5P1bZOg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="passer/posAutorisee/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒p0 ↦ (position{p ↦ z})(p0)∈ZoneAutorisee" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.invariant#_k9bkANUHEeaKwqGypOPurg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM\|"/>
@@ -84,7 +98,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poSequent#passer\/posAutorisee\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="passer/position/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="24">
+<org.eventb.core.poSequent name="passer/position/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="32">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{p ↦ z}=position" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM\||org.eventb.core.action#_ugfgkNUFEeaKwqGypOPurg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM\|"/>
@@ -95,9 +109,8 @@
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 <org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationy" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationy" org.eventb.core.poStamp="24">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="z∈ran(ZoneAutorisee)" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM\||org.eventb.core.guard#_pnBsstUEEeaKwqGypOPurg"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM\||org.eventb.core.guard#_C0mvcNUFEeaKwqGypOPurg"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationy" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#EVTIDENTAutorisationy" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p ↦ z∈ZoneAutorisee" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.event#_dzBjkL3hEea3DNgI76fxM\||org.eventb.core.guard#_pnBsstUEEeaKwqGypOPurg"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/ControleAcces.bpo|org.eventb.core.poFile#ControleAcces|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="22">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒p ↦ position(p)∈ZoneAutorisee" org.eventb.core.source="/TP1/ControleAcces.bum|org.eventb.core.machineFile#ControleAcces|org.eventb.core.invariant#_k9bkANUHEeaKwqGypOPurg"/>

@@ -146,7 +146,6 @@
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -159,7 +158,6 @@
 <org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="position(p)∈Zone ∖ ({Exterieur}∪{z})∨position(p)=Exterieur"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="position∈Personne ⇸ Zone"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="p∈Personne"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊥∨(⊤∧⊤)"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="persDansBat⊆Personne">
 <org.eventb.core.prIdent name="persDansBat" org.eventb.core.type="ℙ(Personne)"/>
