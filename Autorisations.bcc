@@ -15,7 +15,7 @@
 <org.eventb.core.scConstant name="SuivreFleches" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.constant#_uww8wNT7EeaKwqGypOPurg" org.eventb.core.type="ℙ(Zone×Zone)"/>
 <org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/TP1/PersonnePos.buc|org.eventb.core.contextFile#PersonnePos|org.eventb.core.carrierSet#_RGAvUL3qEea3DNgI76fxMw" org.eventb.core.type="ℙ(Zone)"/>
 </org.eventb.core.scInternalContext>
-<org.eventb.core.scAxiom name="PersonnePot" org.eventb.core.label="a1" org.eventb.core.predicate="ZoneAutorisee⊆Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_xsbVQtT-EeaKwqGypOPurg" org.eventb.core.theorem="false"/>
-<org.eventb.core.scAxiom name="PersonnePou" org.eventb.core.label="a2" org.eventb.core.predicate="Exterieur∈ZoneAutorisee" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_Ph_LkNUGEeaKwqGypOPurg" org.eventb.core.theorem="false"/>
-<org.eventb.core.scConstant name="ZoneAutorisee" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.constant#_xsbVQNT-EeaKwqGypOPurg" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.scAxiom name="PersonnePot" org.eventb.core.label="a1" org.eventb.core.predicate="ZoneAutorisee∈Personne ↔ Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_xsbVQtT-EeaKwqGypOPurg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="PersonnePou" org.eventb.core.label="a2" org.eventb.core.predicate="Exterieur∈ran(ZoneAutorisee)" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_PhDBQNXTEeaypPhbtpeAIQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ZoneAutorisee" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.constant#_xsbVQNT-EeaKwqGypOPurg" org.eventb.core.type="ℙ(Personne×Zone)"/>
 </org.eventb.core.scContextFile>
